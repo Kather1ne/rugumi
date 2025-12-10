@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Rugumi</title>
+  <script>
+    // Redirect to index.html with the original path
+    const path = window.location.pathname;
+    const basePath = '/rugumi/';
+    const pathWithoutBase = path.startsWith(basePath) ? path.slice(basePath.length) : path;
+    
+    // Store the redirect path and go to home
+    sessionStorage.redirect = pathWithoutBase;
+    window.location.href = basePath;
+  </script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
